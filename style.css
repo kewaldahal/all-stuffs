@@ -5,6 +5,31 @@ body {
     padding: 0;
     color: white;
 }
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    background-color: black;
+}
+
+.head button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: rgb(210, 204, 204);
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.head button:hover {
+    color: rgb(214, 214, 214);
+    background-color: black;
+    box-shadow: 0 20px 30px darkblue;
+}
+
 
 .project-list {
     display: flex;
@@ -17,25 +42,25 @@ body {
 
 .project-container {
     position: relative;
-    width: calc(25% - 10px); 
-    height: 200px;
+    width: calc(25% - 10px);
+    height: 250px;
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
 }
 
 .project-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
-.project-name {
+.project-title {
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     left: 10px;
     font-size: 16px;
     color: white;
@@ -45,8 +70,9 @@ body {
 }
 
 .project-container:hover {
-    transform: scale(1.05); 
-    background-color: lightblue; 
+    transform: scale(1.05);
+    background-color: lightblue;
+    box-shadow: 0 16px 20px darkblue; /* Added box shadow on hover */
 }
 
 .overlay {
@@ -69,6 +95,6 @@ body {
 .overlay a {
     display: block;
     font-size: 24px;
-    color: white;  
+    color: white;
     padding: 5px;
 }

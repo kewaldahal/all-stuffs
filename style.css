@@ -98,3 +98,30 @@ body {
     color: white;
     padding: 5px;
 }
+@media (max-width: 1200px) {
+    .project-list {
+        justify-content: center;
+    }
+    .project-container {
+        width: calc(33.33% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .head {
+        height: 80px;
+    }
+    .head button {
+        font-size: 16px;
+    }
+    .project-container {
+        width: 100%;
+    }
+}
+
